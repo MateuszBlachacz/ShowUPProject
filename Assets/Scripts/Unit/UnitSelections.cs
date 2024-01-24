@@ -4,7 +4,7 @@ using UnityEngine;
 public class UnitSelections : MonoBehaviour
 {
     public List<GameObject> unitList = new List<GameObject>();
-    public List<GameObject> unisSelected = new List<GameObject>();
+    public List<GameObject> unitSelected = new List<GameObject>();
 
     private static UnitSelections _instance;
     public static UnitSelections Instance { get { return _instance; } }
@@ -20,14 +20,25 @@ public class UnitSelections : MonoBehaviour
         }
     }
 
-    public void ClikSelect(GameObject unitToAdd)
+    public void ClickSelect(GameObject unitToAdd)
     {
-
+        DeselectAll();
+        unitSelected.Add(unitToAdd);
+        unitToAdd.transform.GetChild(0).gameObject.SetActive(true);
     }
 
-    public void ShiftClikSelect(GameObject unitToAdd)
+    public void ShiftClickSelect(GameObject unitToAdd)
     {
-
+        if (!unitSelected.Contains(unitToAdd))
+        {
+            unitSelected.Add(unitToAdd);
+            unitToAdd.transform.GetChild(0).gameObject.SetActive(true);
+        } else
+        {
+            unitToAdd.transform.GetChild(0).gameObject.SetActive(false);
+            unitSelected.Remove(unitToAdd);
+            
+        }
     }
 
     public void DragSelect(GameObject unitToAdd)
@@ -37,7 +48,11 @@ public class UnitSelections : MonoBehaviour
 
     public void DeselectAll()
     {
-
+        foreach (var unit in unitSelected)
+        {
+            unit.transform.GetChild(0).gameObject.SetActive(false);
+        }
+        unitSelected.Clear();
 
     }
 
