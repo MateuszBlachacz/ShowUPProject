@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class Unit : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField]
+    bool bPlayerUnit = true;
+
     void Start()
     {
-        
+        if(bPlayerUnit) UnitSelections.Instance.unitList.Add(this.gameObject);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDestroy()
     {
-        
+        UnitSelections.Instance.unitList.Remove(this.gameObject);
     }
 }
