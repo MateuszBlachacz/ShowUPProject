@@ -24,7 +24,7 @@ public class UnitSelections : MonoBehaviour
     {
         DeselectAll();
         unitsSelected.Add(unitToAdd);
-        unitToAdd.transform.GetChild(0).gameObject.SetActive(true);
+        UnitSelectionsGraphicUpdate(unitToAdd,true);
     }
 
     public void ShiftClickSelect(GameObject unitToAdd)
@@ -32,10 +32,10 @@ public class UnitSelections : MonoBehaviour
         if (!unitsSelected.Contains(unitToAdd))
         {
             unitsSelected.Add(unitToAdd);
-            unitToAdd.transform.GetChild(0).gameObject.SetActive(true);
+            UnitSelectionsGraphicUpdate(unitToAdd,true);
         } else
         {
-            unitToAdd.transform.GetChild(0).gameObject.SetActive(false);
+            UnitSelectionsGraphicUpdate(unitToAdd,false);
             unitsSelected.Remove(unitToAdd);
             
         }
@@ -54,7 +54,7 @@ public class UnitSelections : MonoBehaviour
     {
         foreach (var unit in unitsSelected)
         {
-            unit.transform.GetChild(0).gameObject.SetActive(false);
+            UnitSelectionsGraphicUpdate(unit,false);
         }
         unitsSelected.Clear();
 
