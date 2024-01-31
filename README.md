@@ -1,2 +1,2 @@
 # ShowUPProject
- This project is created for recruitments to The to Knights of Unity
+ This project is created for recruitment to The Knights of Unity
