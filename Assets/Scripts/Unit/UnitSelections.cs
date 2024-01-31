@@ -62,7 +62,17 @@ public class UnitSelections : MonoBehaviour
 
     void UnitSelectionsGraphicUpdate(GameObject unit, bool setVisual)
     {
-        unit.transform.GetChild(0).gameObject.SetActive(setVisual);
+        
+        for (int childId = 0; childId < unit.transform.childCount; childId++)
+        {
+            Transform child = unit.transform.GetChild(childId);
+            if(child.gameObject.tag == "UnitSelectAnim")
+            {
+                child.gameObject.SetActive(setVisual);
+            }
+
+        }
+     
     }
 
     public void Deselect(GameObject unitToDeselect)
