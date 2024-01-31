@@ -56,6 +56,11 @@ public class UnitSelections : MonoBehaviour
 
     }
 
+    void UnitSelectionsGraphicUpdate(GameObject unit, bool setVisual)
+    {
+        unit.transform.GetChild(0).gameObject.SetActive(setVisual);
+    }
+
     public void Deselect(GameObject unitToDeselect)
     {
 
