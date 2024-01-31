@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7657309983548066001, guid: 7abf625f5fa8f97448124627fb236e27, type: 3}
+      propertyPath: m_TagString
+      value: UnitSelectAnim
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7abf625f5fa8f97448124627fb236e27, type: 3}
       propertyPath: m_Name
       value: SimpleGuy
@@ -106,7 +110,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9931baff3ce38194d82a78b4a5616f85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedRotation: 1
 --- !u!1 &6190678090781826708 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7abf625f5fa8f97448124627fb236e27, type: 3}
