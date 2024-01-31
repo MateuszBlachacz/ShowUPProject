@@ -18,7 +18,6 @@ public class SelectAnimation : MonoBehaviour
     {
         if (transform.localScale.x <= minsize) chVal *= -1;
         if (transform.localScale.x >= maxsize) chVal *= -1;
-        Debug.Log(chVal);
         return chVal;
     }
 }
