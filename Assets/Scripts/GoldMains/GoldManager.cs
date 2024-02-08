@@ -8,7 +8,7 @@ public class GoldManager : MonoBehaviour
     public float Gold {get; set;}
 
     [SerializeField]
-    GameEvent goldGather;
+    GameEvent goldChange;
 
     private void Awake()
     {
@@ -24,6 +24,7 @@ public class GoldManager : MonoBehaviour
     {
         
         Gold += gold;
+        goldChange.TriggerEvent(Gold);
         Debug.Log(Gold);
     }
 
