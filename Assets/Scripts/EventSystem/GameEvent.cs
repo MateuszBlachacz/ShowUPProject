@@ -5,14 +5,14 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "GameEvent", menuName = "ScriptableObject/Event")]
 public class GameEvent : ScriptableObject
 {
-    List<GameEventListener> listeners = new List<GameEventListener>();
+    List<GameEventListenerAll> listeners = new List<GameEventListenerAll>();
 
     
     public void TriggerEvent()
     {
         for (int i = listeners.Count - 1 ; i >= 0; i--)
         {
-            listeners[i].OnEventTriggered();
+            ((GameEventListener)listeners[i]).OnEventTriggered();
         }
     }
     
@@ -20,16 +20,16 @@ public class GameEvent : ScriptableObject
     {
         for (int i = listeners.Count - 1; i >= 0; i--)
         {
-            listeners[i].OnEventTriggered(value);
+            ((GameEventFloatListener)listeners[i]).OnEventTriggered(value);
         }
     }
 
-    public void AddListener(GameEventListener listener)
+    public void AddListener(GameEventListenerAll listener)
     {
         listeners.Add(listener);
     }
 
-    public void RemoveListener(GameEventListener listener)
+    public void RemoveListener(GameEventListenerAll listener)
     {
         listeners.Remove(listener);
     }
