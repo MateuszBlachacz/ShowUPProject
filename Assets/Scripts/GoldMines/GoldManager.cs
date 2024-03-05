@@ -25,7 +25,7 @@ public class GoldManager : MonoBehaviour
         
         Gold += gold;
         goldChange.TriggerEvent(Gold);
-        Debug.Log(Gold);
+        //Debug.Log(Gold);
     }
 
 }

@@ -2,10 +2,10 @@ using UnityEngine;
 using UnityEngine.Events;
 using TMPro;
 
-public class GoldMain : MonoBehaviour
+public class GoldMine : MonoBehaviour
 {
     [SerializeField]
-    GoldMainPropertis info;
+    GoldMinePropertis info;
     [SerializeField]
     TextMeshProUGUI GoldText;
 
