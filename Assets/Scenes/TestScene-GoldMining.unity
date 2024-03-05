@@ -269,6 +269,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GoldMine (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3561026839669088289, guid: fcf999d2039555c4c9fc3e4a0409606e, type: 3}
+      propertyPath: info
+      value: 
+      objectReference: {fileID: 11400000, guid: 6ed992ede3c487c4592c9343abcbd09d, type: 2}
     - target: {fileID: 4345063760078476735, guid: fcf999d2039555c4c9fc3e4a0409606e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.01

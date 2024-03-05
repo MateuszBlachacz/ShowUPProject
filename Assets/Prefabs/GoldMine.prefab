@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   info: {fileID: 11400000, guid: ad371770f20bbcc44b28dd30a040767b, type: 2}
+  GoldText: {fileID: 7174312614044291774}
   goldGather: {fileID: 11400000, guid: 5c330406ade39424e83d03047f535f7b, type: 2}
 --- !u!1 &1586000497667822937
 GameObject:
